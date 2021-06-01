@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <meta name=author content="Scott D. Anderson">
+    <title>Persistent Shopping Lists</title>
+    <style>
+        main { margin: 5px 10%; }
+    </style>
+</head>
+<body>
+
+<main>
+    <h1>Persistent Shopping Lists</h1>
+
+<h2>Produce</h2>
+<ul id="produce"></ul>
+
+<form>
+    <p><label>item <input type="text" name="produce-item"></label>
+        <button type="button" id="add-produce">add item</button></p>
+</form>
+
+<h2>Bakery</h2>
+<ul id="bakery"></ul>
+
+<form>
+    <p><label>item <input type="text" name="bakery-item"></label>
+        <button type="button" id="add-bakery">add item</button></p>
+</form>
+
+<h2>Local Storage</h2>
+
+    <p><button type="button" id="save">save all</button>
+        <button type="button" id="clear">clear</button></p>
+
+    <section id="section_about">
+        <h2>About</h2>
+        <p>Demonstrates several <em>persistent</em> data structures, in this case, shopping lists.
+        <p>You can add items to each list by using the text box and the "add item" button. 
+        <p>You can delete items from the lists by clicking on them.
+        <p>The list items are given ids (<code>gid</code> values) so that you can have duplicates.
+        <p>You can save the contents of all lists to local storage by using the "save all" button.
+        <p>You can clear the saved grocery lists with the "clear"
+        button. That's mostly for debugging.</p>
+    </section>
+</main>
+
+<!-- JavaScript at the bottom -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cs.wellesley.edu/~anderson/js/bounds/bounds-plugin.js"></script>
+<script src="PersistentList.js"></script>
+<script src="shopping-lists.js"></script>
+
+</body>
+</html>
